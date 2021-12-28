@@ -46,19 +46,5 @@ while m[end[0]][end[1]] == 0:
     make_step(k)
 i, j = end
 k = m[i][j]
-while k > 1:
-  if i > 0 and m[i - 1][j] == k-1:
-    i, j = i-1, j
-    k-=1
-  elif j > 0 and m[i][j - 1] == k-1:
-    i, j = i, j-1
-    k-=1
-  elif i < len(m) - 1 and m[i + 1][j] == k-1:
-    i, j = i+1, j
-    k-=1
-  elif j < len(m[i]) - 1 and m[i][j + 1] == k-1:
-    i, j = i, j+1
-    k -= 1
 print_m(m)
 print('Самый короткий путь: ', m[int(Nowendfirst)][int(Nowendsecond)])
-
